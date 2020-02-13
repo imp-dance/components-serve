@@ -19,4 +19,75 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  background: rgb(233, 233, 243);
+  font-size: 0.9em;
+  display: inline-block;
+  padding: 3px 5px;
+  border-radius: 2px;
+}
+pre code {
+  display: block;
+  padding: 20px !important;
+  border-radius: 0px;
+  border: 1px solid #3c3c52;
+  padding: 10px 20px 10px 50px !important;
+  font-size: 0.8em;
+  counter-reset: line;
+  position: relative;
+  .code-line {
+    display: inline-block; // important to prevent each line from becoming a paragraph.
+    position: relative;
+    &::before {
+      counter-increment: line;
+      content: counter(line);
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -40px;
+      opacity: 0.5;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+article {
+  header {
+    display: flex;
+    align-items: center;
+    h1 {
+      margin: 0 0 10px;
+      flex-grow: 2;
+    }
+    border-bottom: 1px solid #eee;
+  }
+  a {
+    color: #575796;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  blockquote {
+    background: #f4f4fa;
+    border-left: 4px solid #7777b1;
+    margin: 10px 0;
+    padding: 10px 10px 10px 30px;
+  }
+  padding-bottom: 10vh;
+}
+.requires {
+  background: linear-gradient(to right, #fff, #efeef8);
+  padding: 10px;
+  font-size: 0.9em;
+  text-align: right;
+  h2 {
+    font-size: 1.1em;
+    margin: 0 0 10px;
+  }
 }

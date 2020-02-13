@@ -33,7 +33,7 @@ function Header() {
       <LeftContent>
         <img src="https://haakon.underbakke.net/images/sl1ck.jpg" alt="sl1ck" />
         <h1>
-          <a href="#">components</a>
+          <a href="https://haakon.underbakke.net/components">components</a>
         </h1>
       </LeftContent>
     </StyledHeader>

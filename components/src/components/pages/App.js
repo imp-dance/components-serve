@@ -2,7 +2,9 @@ import React from "react";
 import Header from "../layout/Header";
 import Aside from "../layout/Aside";
 import Main from "../layout/Main";
+import Article from "../layout/Article";
 import PageContainer from "../layout/PageContainer";
+import insideLabelInput from "./inside-label-input";
 import "../styles/App.scss";
 
 function App() {
@@ -12,9 +14,7 @@ function App() {
       <PageContainer>
         <Aside>...</Aside>
         <Main>
-          <h2>haakon.underbakke.net/components</h2>
-          This is a place that I will share components at some point in the
-          future.
+          <Article item={insideLabelInput} />
         </Main>
       </PageContainer>
     </div>

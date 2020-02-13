@@ -5,6 +5,8 @@ const PageContainer = styled.div`
   display: flex;
   aside {
     flex-grow: 2;
+    max-width: 250px;
+    min-width: 200px;
   }
   main {
     flex-grow: 10;
