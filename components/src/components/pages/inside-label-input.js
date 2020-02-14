@@ -1,7 +1,7 @@
 import React from "react";
 import InsideLabelInput from "../reusable/InsideLabelInput";
 export default {
-  title: "label-inside-input-react",
+  title: "Label inside input",
   markdown: `
 ## Install
 

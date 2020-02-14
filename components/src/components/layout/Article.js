@@ -11,7 +11,7 @@ function Article({ item }) {
       const lines = block.innerHTML.split("\n");
       const newLines = [];
       lines.forEach(line => {
-        newLines.push(`<div class="code-line">${line}</div>`);
+        newLines.push(`<div class="code-line"> ${line}</div>`);
       });
       block.innerHTML = newLines.join("\n");
     });
