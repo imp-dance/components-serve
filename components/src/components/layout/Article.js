@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Tag from "../reusable/Tag";
 import ReactMarkdown from "react-markdown";
 import hljs from "highlight.js";
+import Inputs from "label-inside-input-react";
 import "../styles/App.scss";
 function Article({ item }) {
   useEffect(() => {
@@ -20,7 +21,7 @@ function Article({ item }) {
       <header>
         <h1>{item.title}</h1>
         <div className="requires">
-          <h2>Requires</h2>
+          <h2>Dependencies</h2>
           {item.requires.map(item => (
             <Tag>{item}</Tag>
           ))}

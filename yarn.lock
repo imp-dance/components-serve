@@ -742,6 +742,11 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+label-inside-input-react@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/label-inside-input-react/-/label-inside-input-react-1.0.1.tgz#193ebea3860dc6add1b1bb142d1b186df2ddbd00"
+  integrity sha512-f7vme1iVgNo+MvpQyHaXOpb3ovCY6Sv58WtTwlFKsz2PyPkNWsdD2nzvttVDYXBurTnOoClqNiglj41czgxUgg==
+
 lcid@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-1.0.0.tgz#308accafa0bc483a3867b4b6f2b9506251d1b835"

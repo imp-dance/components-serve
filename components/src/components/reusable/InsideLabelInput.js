@@ -17,7 +17,7 @@ const StyledLabel = styled.label`
   input {
     border: 2px solid #eee;
     border-radius: 3px;
-    padding: 1.1em 0.5em 0.7em;
+    padding: 1.1em 0.5em 0.5em;
     font-size: 1em;
     width: 100%;
     &::placeholder {
