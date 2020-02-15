@@ -6014,6 +6014,13 @@ ignore@^4.0.6:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
 
+image-gallery-hu-react@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/image-gallery-hu-react/-/image-gallery-hu-react-1.1.0.tgz#44cac40df0f331232efc85acfd59c12590d10e4b"
+  integrity sha512-FApXT9V5QDpECyIW/crB5oAk8Vle+ystVw52X74yjeiE+Xejgoo38FygkUtEXl8jE75DScrFVmu/58XSa4TUUQ==
+  dependencies:
+    styled-components "^5.0.1"
+
 immer@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/immer/-/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"

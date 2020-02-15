@@ -1,5 +1,3 @@
-import React from "react";
-import InsideLabelInput from "../reusable/InsideLabelInput";
 export default {
   title: "haakon.underbakke.net/components",
   url: "/",

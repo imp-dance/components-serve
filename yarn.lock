@@ -620,6 +620,13 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
+image-gallery-hu-react@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/image-gallery-hu-react/-/image-gallery-hu-react-1.0.4.tgz#7abf9bb7ef35b9d95f637b9019e392e8305b7207"
+  integrity sha512-mlMLup+SalcWQntFjrTWz+facCDi0DZBoLtRM+FVk2R92EDvlA+cz7tln5pLF1bV1zQj2FZUkUUsvR9CetJM4w==
+  dependencies:
+    styled-components "^5.0.1"
+
 in-publish@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/in-publish/-/in-publish-2.0.0.tgz#e20ff5e3a2afc2690320b6dc552682a9c7fadf51"
