@@ -2,6 +2,7 @@ import React from "react";
 import InsideLabelInput from "../reusable/InsideLabelInput";
 export default {
   title: "Label inside input",
+  url: "/label-inside-input",
   markdown: `
 ## Install
 

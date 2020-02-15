@@ -1,3 +1,4 @@
 import LabelInsideInput from "./components/pages/inside-label-input";
-export const Routes = [LabelInsideInput];
+import Index from "./components/pages/index";
+export const Routes = [LabelInsideInput, Index];
 export default Routes;

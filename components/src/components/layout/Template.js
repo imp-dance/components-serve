@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import hljs from "highlight.js";
 import Inputs from "label-inside-input-react";
 import "../styles/App.scss";
-function Article({ item }) {
+function Template({ item }) {
   useEffect(() => {
     document.querySelectorAll("pre code").forEach(block => {
       hljs.highlightBlock(block);
@@ -20,18 +20,24 @@ function Article({ item }) {
     <article>
       <header>
         <h1>{item.title}</h1>
-        <div className="requires">
-          <h2>Dependencies</h2>
-          {item.requires.map(item => (
-            <Tag>{item}</Tag>
-          ))}
-        </div>
+        {item.requires.length > 0 && (
+          <div className="requires">
+            <h2>Dependencies</h2>
+            {item.requires.map(item => (
+              <Tag>{item}</Tag>
+            ))}
+          </div>
+        )}
       </header>
-      <h2>Demo</h2>
-      {item.demo}
+      {item.demo !== null && (
+        <div className="demo">
+          <h2>Demo</h2>
+          {item.demo}
+        </div>
+      )}
       <ReactMarkdown source={item.markdown} />
     </article>
   );
 }
 
-export default Article;
+export default Template;

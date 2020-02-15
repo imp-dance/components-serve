@@ -1,22 +1,31 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Routes from "../../routes";
 import Header from "../layout/Header";
 import Aside from "../layout/Aside";
 import Main from "../layout/Main";
-import Article from "../layout/Article";
+import Template from "../layout/Template";
 import PageContainer from "../layout/PageContainer";
-import insideLabelInput from "./inside-label-input";
 import "../styles/App.scss";
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <PageContainer>
-        <Aside>...</Aside>
-        <Main>
-          <Article item={insideLabelInput} />
-        </Main>
-      </PageContainer>
+      <Router basename="/components">
+        <Header></Header>
+        <PageContainer>
+          <Aside />
+          <Main>
+            <Switch>
+              {Routes.map(item => (
+                <Route path={item.url} exact={true}>
+                  <Template item={item} />
+                </Route>
+              ))}
+            </Switch>
+          </Main>
+        </PageContainer>
+      </Router>
     </div>
   );
 }

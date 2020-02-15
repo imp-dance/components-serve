@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import routes from "../../routes";
 import "../styles/App.scss";
 const StyledAside = styled.aside`
@@ -12,39 +13,27 @@ const StyledUL = styled.ul`
   margin: 0 0 10px;
   list-style: none;
 `;
-const ListButton = styled.button`
-  background: transparent;
-  font-family: inherit;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1em;
-  display: block;
-  width: 100%;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  padding: 15px 20px;
-  &:hover {
-    background: #f9f9f9;
-  }
+const StyledNav = styled.nav`
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
 `;
 function Aside({ children }) {
-  const open = item => {
-    console.log(item);
-  };
   return (
     <StyledAside>
-      <nav>
+      <StyledNav>
         <StyledUL>
-          {routes.map(item => (
-            <li>
-              <ListButton onClick={open.bind(null, item)}>
-                {item.title}
-              </ListButton>
-            </li>
-          ))}
+          {routes.map(
+            item =>
+              item.url !== "/" && (
+                <li>
+                  <Link to={item.url}>{item.title}</Link>
+                </li>
+              )
+          )}
         </StyledUL>
-      </nav>
+      </StyledNav>
     </StyledAside>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import "../styles/App.scss";
 const StyledHeader = styled.header`
   background: #f9f9f9;
@@ -33,7 +34,7 @@ function Header() {
       <LeftContent>
         <img src="https://haakon.underbakke.net/images/sl1ck.jpg" alt="sl1ck" />
         <h1>
-          <a href="https://haakon.underbakke.net/components">components</a>
+          <Link to="/">components</Link>
         </h1>
       </LeftContent>
     </StyledHeader>
