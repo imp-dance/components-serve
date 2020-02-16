@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Tag from "../reusable/Tag";
 import ReactMarkdown from "react-markdown";
 import hljs from "highlight.js";
-import Inputs from "label-inside-input-react";
 import "../styles/App.scss";
 function Template({ item }) {
   useEffect(() => {
