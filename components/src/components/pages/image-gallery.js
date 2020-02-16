@@ -33,7 +33,7 @@ export default {
 
 Use the **style**, **labelStyle**, **className** or **labelClassName** props to apply styles to the input and label.
 `,
-  requires: ["styled-components"],
+  requires: [],
   demo: (
     <ImageGallery
       images={[

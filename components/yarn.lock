@@ -6014,10 +6014,10 @@ ignore@^4.0.6:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
 
-image-gallery-hu-react@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/image-gallery-hu-react/-/image-gallery-hu-react-1.1.1.tgz#c9a8be36bd4d8cbb7d217621926a880fddfc2482"
-  integrity sha512-8jKwGBulGk2K9ZCRaaPUBLAtL8Y2x//WDUf//jyvIyqbVtq3X2KoBf/5HTj45yU8p/XWDMLCOQHk2OkxspoKqg==
+image-gallery-hu-react@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/image-gallery-hu-react/-/image-gallery-hu-react-1.1.2.tgz#a4be2a6d40495aa9e67b0b6c2fe54dbda4a765d8"
+  integrity sha512-AGf0EAi8WkHDHtvZ2WcKJW5dqoUIBhiE07rconTOKRX0icqjFjgxvyIGhY1IwZbCZZqz98hc8lK05mP9MpD9dg==
 
 immer@1.10.0:
   version "1.10.0"
