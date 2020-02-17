@@ -6,7 +6,7 @@ export default {
   markdown: `
 ## Install
 
-    npm install --save label-inside-input-react
+    npm i --save label-inside-input-react
 
 ## Use
 

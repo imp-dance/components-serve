@@ -6,7 +6,7 @@ export default {
   markdown: `
 ## Install
 
-    npm install --save image-gallery-hu-react
+    npm i --save image-gallery-hu-react
 
 ## Use
 
@@ -30,7 +30,11 @@ export default {
 
 > **images**: An array of image-urls.
 
-> ** * **: All other props are passed on to the container div
+> **noOpen**: Boolean, set to true if you don't want the images to open in a new tab onClick.
+
+> **hardScroll**: Boolean, set to true if you don't want smooth scrolling when clicking the buttons.
+
+> ** * **: All other props are passed on to the container div.
 
 ## Styling
 
@@ -38,9 +42,9 @@ You can use the style prop to target the container div, or use the following sel
 
 > **\`.hu-styled-imageGalleryContainer\`** : Used for width, layout & positioning styles.
 
-> **\`.hu-comp-img-gal-left\`** / **\`.hu-comp-img-gal-right\`** : The buttons
+> **\`.hu-comp-img-gal-left\`** / **\`.hu-comp-img-gal-right\`** : The buttons.
 
-> **\`.hu-styled-imageGalleryEntry\`** : Div wrapper for each image
+> **\`.hu-styled-imageGalleryEntry\`** : Div wrapper for each image.
 
 `,
   requires: [],
