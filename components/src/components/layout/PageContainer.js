@@ -7,6 +7,30 @@ const PageContainer = styled.div`
     flex-grow: 2;
     max-width: 250px;
     min-width: 200px;
+    .hideWhenLarge {
+      display: none;
+    }
+    @media screen and (max-width: 600px) {
+      .hideWhenLarge {
+        display: block;
+      }
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      &.open {
+        position: fixed !important;
+        opacity: 1;
+        width: 100%;
+        max-width: 100%;
+        pointer-events: all;
+        z-index: 9999;
+        background: #fff;
+      }
+    }
   }
   main {
     flex-grow: 10;

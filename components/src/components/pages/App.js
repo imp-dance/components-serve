@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Routes from "../../routes";
 import Header from "../layout/Header";
@@ -9,12 +9,15 @@ import PageContainer from "../layout/PageContainer";
 import "../styles/App.scss";
 
 function App() {
+  const [navOpen, setNavOpen] = useState(false);
+  const openNav = () => setNavOpen(true);
+  const closeNav = () => setNavOpen(false);
   return (
     <div className="App">
       <Router basename="/components">
-        <Header></Header>
+        <Header openNav={openNav}></Header>
         <PageContainer>
-          <Aside />
+          <Aside open={navOpen} closeNav={closeNav} />
           <Main>
             <Switch>
               {Routes.map(item => (

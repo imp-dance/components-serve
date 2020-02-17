@@ -6,6 +6,8 @@ const StyledHeader = styled.header`
   background: #f9f9f9;
   padding: 20px;
   border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
   height: 70px;
   h1 {
     font-size: 1.4em;
@@ -28,7 +30,21 @@ const LeftContent = styled.div`
     justify-content: center;
   }
 `;
-function Header() {
+const RightContent = styled.div`
+  margin-left: auto;
+  button {
+    background: #222;
+    color: #f9f9f9;
+    padding: 5px 19px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    @media screen and (min-width: 600px) {
+      display: none;
+    }
+  }
+`;
+function Header({ openNav }) {
   return (
     <StyledHeader>
       <LeftContent>
@@ -37,6 +53,9 @@ function Header() {
           <Link to="/">components</Link>
         </h1>
       </LeftContent>
+      <RightContent>
+        <button onClick={openNav}>☰</button>
+      </RightContent>
     </StyledHeader>
   );
 }

@@ -38,9 +38,9 @@ You can use the style prop to target the container div, or use the following sel
 
 > **\`.hu-styled-imageGalleryContainer\`** : Used for width, layout & positioning styles.
 
-> **\`hu-comp-img-gal-left\`** / **\`hu-comp-img-gal-right\`** : The buttons
+> **\`.hu-comp-img-gal-left\`** / **\`.hu-comp-img-gal-right\`** : The buttons
 
-> **\`hu-styled-imageGalleryEntry\`** : Div wrapper for each image
+> **\`.hu-styled-imageGalleryEntry\`** : Div wrapper for each image
 
 `,
   requires: [],

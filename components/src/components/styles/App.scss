@@ -62,9 +62,12 @@ article {
     display: flex;
     align-items: center;
     min-height: 71px;
+    word-wrap: break-word;
     h1 {
       margin: 0 0 10px;
       flex-grow: 2;
+      word-wrap: break-word;
+      max-width: 100%;
     }
     border-bottom: 1px solid #eee;
   }

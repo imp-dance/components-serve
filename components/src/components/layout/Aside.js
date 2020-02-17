@@ -19,18 +19,38 @@ const StyledNav = styled.nav`
   max-height: 100vh;
   overflow-y: auto;
 `;
-function Aside({ children }) {
+function Aside({ open, closeNav }) {
   return (
-    <StyledAside>
+    <StyledAside className={open ? "open" : ""}>
       <StyledNav>
         <StyledUL>
+          {open && (
+            <li>
+              <Link to="/" onClick={closeNav} className="hideWhenLarge">
+                Home
+              </Link>
+            </li>
+          )}
           {routes.map(
             item =>
               item.url !== "/" && (
                 <li>
-                  <Link to={item.url}>{item.title}</Link>
+                  <Link
+                    to={item.url}
+                    key={item.title + "-link"}
+                    onClick={closeNav}
+                  >
+                    {item.title}
+                  </Link>
                 </li>
               )
+          )}
+          {open && (
+            <li>
+              <a href="#" onClick={closeNav} className="hideWhenLarge">
+                Close
+              </a>
+            </li>
           )}
         </StyledUL>
       </StyledNav>
