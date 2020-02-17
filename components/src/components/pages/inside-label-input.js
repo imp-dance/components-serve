@@ -1,5 +1,5 @@
 import React from "react";
-import InsideLabelInput from "../reusable/InsideLabelInput";
+import InsideLabelInput from "label-inside-input-react";
 export default {
   title: "Label inside input",
   url: "/label-inside-input",
@@ -34,6 +34,6 @@ export default {
 
 Use the **style**, **labelStyle**, **className** or **labelClassName** props to apply styles to the input and label.
 `,
-  requires: ["styled-components"],
+  requires: [],
   demo: <InsideLabelInput type="text" placeholder="Type whatever you want" />
 };

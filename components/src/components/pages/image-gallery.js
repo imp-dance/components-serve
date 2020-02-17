@@ -19,7 +19,10 @@ export default {
             "https://picsum.photos/690",
             "https://picsum.photos/700", 
             "https://picsum.photos/680"
-          ]} />
+          ]}
+          style={{
+            width: "400px"
+          }} />
         </div>
       )
     }
@@ -31,7 +34,14 @@ export default {
 
 ## Styling
 
-Use the **style**, **labelStyle**, **className** or **labelClassName** props to apply styles to the input and label.
+You can use the style prop to target the container div, or use the following selectors to target the elements:
+
+> **\`.hu-styled-imageGalleryContainer\`** : Used for width, layout & positioning styles.
+
+> **\`hu-comp-img-gal-left\`** / **\`hu-comp-img-gal-right\`** : The buttons
+
+> **\`hu-styled-imageGalleryEntry\`** : Div wrapper for each image
+
 `,
   requires: [],
   demo: (
