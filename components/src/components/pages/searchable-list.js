@@ -26,7 +26,7 @@ export default {
         {
             content: (
             <span>
-                <i>Nested</i> <u>Seperate</u> <b>nodes</b>
+                <i>Nested</i> <u>Separate</u> <b>nodes</b>
             </span>
             ),
             tags: ["nesting"],
@@ -122,7 +122,7 @@ This is the method that is used to search through react elements for searchable 
         {
           content: (
             <span>
-              <i>Nested</i> <u>Seperate</u> <strong>nodes</strong>
+              <i>Nested</i> <u>Separate</u> <strong>nodes</strong>
             </span>
           ),
           tags: ["nesting"],
