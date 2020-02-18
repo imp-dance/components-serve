@@ -5,6 +5,7 @@ const StyledMain = styled.main`
   background: #fff;
   padding: 20px;
   overflow-y: auto;
+  max-width: 1000px;
 `;
 function Main({ children }) {
   return <StyledMain>{children}</StyledMain>;

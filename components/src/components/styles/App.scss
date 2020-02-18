@@ -78,6 +78,9 @@ article {
     }
   }
   .demo {
+    @media screen and (min-width: 1050px) {
+      display: none;
+    }
     border-left: 10px solid #efeef8;
     padding: 10px;
     h2 {
@@ -102,25 +105,17 @@ article {
     margin: 0 0 10px;
   }
 }
-aside {
-  nav {
-    a {
-      background: transparent;
-      font-family: inherit;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 1em;
-      display: block;
-      width: 100%;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-      padding: 15px 20px;
-      color: inherit;
-      text-decoration: none;
-      &:hover {
-        background: #f9f9f9;
-      }
-    }
+.rightSection {
+  width: 100%;
+  max-width: 650px;
+  flex-shrink: 2;
+  @media screen and (max-width: 1050px) {
+    display: none;
+  }
+  .demo {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    width: 100%;
   }
 }

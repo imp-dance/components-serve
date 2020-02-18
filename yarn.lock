@@ -749,10 +749,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-label-inside-input-react@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/label-inside-input-react/-/label-inside-input-react-1.0.1.tgz#193ebea3860dc6add1b1bb142d1b186df2ddbd00"
-  integrity sha512-f7vme1iVgNo+MvpQyHaXOpb3ovCY6Sv58WtTwlFKsz2PyPkNWsdD2nzvttVDYXBurTnOoClqNiglj41czgxUgg==
+label-inside-input-react@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/label-inside-input-react/-/label-inside-input-react-1.1.4.tgz#f380326fc9a09036dd3a48686df024bc8253a0ef"
+  integrity sha512-gpP7s4xhjqhpseQ4cqN+Bc892oeYWK2Pa+B2K+0eAqA1W6AnUnzAtR6IliuijdBdU03LPYzKWOSyOmhYmTG+sg==
 
 lcid@^1.0.0:
   version "1.0.0"
@@ -1192,6 +1192,13 @@ scss-tokenizer@^0.2.3:
   dependencies:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
+
+searchable-list-hu-react@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/searchable-list-hu-react/-/searchable-list-hu-react-1.0.7.tgz#a3f306fa36ba4b5a3fcac22045ed133a50b9020c"
+  integrity sha512-4oXATGkpLlo0kerDDPr9tPGDU2c1gi9d+qC8KTUPx5HOeJkWfKmEgpNmPOLvZ0+dwLl8XlhG3m/uR1wO9nUXJA==
+  dependencies:
+    label-inside-input-react "^1.1.4"
 
 "semver@2 || 3 || 4 || 5":
   version "5.7.1"

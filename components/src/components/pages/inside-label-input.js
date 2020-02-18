@@ -32,7 +32,7 @@ export default {
 
 ## Styling
 
-Use the **style**, **labelStyle**, **className** or **labelClassName** props to apply styles to the input and label.
+Use the props to apply styles to the input and label, or alternatively use this selector: **\`.hu-comp-label-inside-input\`** to target the container div.
 `,
   requires: [],
   demo: <InsideLabelInput type="text" placeholder="Type whatever you want" />

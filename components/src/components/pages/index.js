@@ -1,8 +1,8 @@
 export default {
-  title: "haakon.underbakke.net/components",
+  title: "hu-components",
   url: "/",
   markdown: `
-A collection of React components that I use a lot.
+A collection of simple lightweight React components that can make life just a little bit easier.
 `,
   requires: [],
   demo: null

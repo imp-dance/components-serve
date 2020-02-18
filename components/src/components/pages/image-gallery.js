@@ -15,14 +15,13 @@ export default {
     const App = () => {
       return (
         <div>
-          <ImageGallery images={[
-            "https://picsum.photos/690",
-            "https://picsum.photos/700", 
-            "https://picsum.photos/680"
-          ]}
-          style={{
-            width: "400px"
-          }} />
+          <ImageGallery 
+            images={[
+              "https://picsum.photos/690",
+              "https://picsum.photos/700", 
+              "https://picsum.photos/680"
+            ]}
+          />
         </div>
       )
     }
@@ -55,7 +54,6 @@ You can use the style prop to target the container div, or use the following sel
         "https://picsum.photos/700",
         "https://picsum.photos/680"
       ]}
-      style={{ width: "400px", maxWidth: "90%" }}
     />
   )
 };

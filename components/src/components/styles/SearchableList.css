@@ -1,0 +1,21 @@
+.hu-comp-searchable-list {
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 3px;
+  padding: 0px;
+  overflow-y: auto;
+  position: relative;
+}
+.hu-comp-searchable-list input {
+  border: none;
+  border-bottom: 2px solid #eee;
+  border-radius: 0px;
+}
+.hu-comp-searchable-list ul {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+.hu-comp-searchable-list .hu-comp-label-inside-input {
+  position: sticky;
+  top: 0;
+}

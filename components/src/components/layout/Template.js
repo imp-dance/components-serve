@@ -28,15 +28,23 @@ function Template({ item }) {
           </div>
         )}
       </header>
+      <Demo item={item} />
+      <ReactMarkdown source={item.markdown} />
+      {item.url === "/" && <div></div>}
+    </article>
+  );
+}
+export const Demo = ({ item }) => {
+  return (
+    <>
       {item.demo !== null && (
         <div className="demo">
           <h2>Demo</h2>
           {item.demo}
         </div>
       )}
-      <ReactMarkdown source={item.markdown} />
-    </article>
+    </>
   );
-}
+};
 
 export default Template;

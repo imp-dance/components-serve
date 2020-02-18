@@ -4,7 +4,8 @@ import Routes from "../../routes";
 import Header from "../layout/Header";
 import Aside from "../layout/Aside";
 import Main from "../layout/Main";
-import Template from "../layout/Template";
+import RightSection from "../layout/RightSection";
+import Template, { Demo } from "../layout/Template";
 import PageContainer from "../layout/PageContainer";
 import "../styles/App.scss";
 
@@ -21,12 +22,21 @@ function App() {
           <Main>
             <Switch>
               {Routes.map(item => (
-                <Route path={item.url} exact={true}>
+                <Route path={item.url} exact={true} key={`route1-${item.url}`}>
                   <Template item={item} />
                 </Route>
               ))}
             </Switch>
           </Main>
+          <RightSection>
+            <Switch>
+              {Routes.map(item => (
+                <Route path={item.url} exact={true} key={`route2-${item.url}`}>
+                  <Demo item={item} />
+                </Route>
+              ))}
+            </Switch>
+          </RightSection>
         </PageContainer>
       </Router>
     </div>
