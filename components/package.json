@@ -10,7 +10,7 @@
     "highlight.js": "^9.18.1",
     "image-gallery-hu-react": "^1.1.3",
     "label-inside-input-react": "^1.1.1",
-    "searchable-list-hu-react": "^1.1.1",
+    "searchable-list-hu-react": "^1.0.7",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
