@@ -96,8 +96,8 @@ This is the method that is used to search through react elements for searchable 
             // Go down one child
             return getRecursiveChildText(reactNode.props.children);
         } else if (reactNode.props.children === undefined) {
-            // Something went wrong
-            return false;
+            // Did not find any text nodes
+            return ' ';
         }
     };
 `,
