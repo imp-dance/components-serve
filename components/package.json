@@ -10,13 +10,13 @@
     "highlight.js": "^9.18.1",
     "image-gallery-hu-react": "^1.1.3",
     "label-inside-input-react": "^1.1.1",
-    "searchable-list-hu-react": "^1.0.7",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-markdown": "^4.3.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
+    "searchable-list-hu-react": "^1.0.8",
     "styled-components": "^5.0.1"
   },
   "scripts": {

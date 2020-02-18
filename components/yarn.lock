@@ -7249,6 +7249,11 @@ label-inside-input-react@^1.1.1:
   resolved "https://registry.yarnpkg.com/label-inside-input-react/-/label-inside-input-react-1.1.1.tgz#b7c86a0b875e5dc7849ef3486278b3f999547e28"
   integrity sha512-aUKJ4DCa4LrO8Ipk8YL0tYjx58ZNbSy/h57viB4BAup/8pbtemWQ3Aoztl5rsPh908aVG7ML8+3vKcy0vPTWxg==
 
+label-inside-input-react@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/label-inside-input-react/-/label-inside-input-react-1.1.4.tgz#f380326fc9a09036dd3a48686df024bc8253a0ef"
+  integrity sha512-gpP7s4xhjqhpseQ4cqN+Bc892oeYWK2Pa+B2K+0eAqA1W6AnUnzAtR6IliuijdBdU03LPYzKWOSyOmhYmTG+sg==
+
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
@@ -10503,6 +10508,13 @@ scss-tokenizer@^0.2.3:
   dependencies:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
+
+searchable-list-hu-react@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/searchable-list-hu-react/-/searchable-list-hu-react-1.0.8.tgz#143e95d6a438b11ec76a77b9a125152c6b2b9a1c"
+  integrity sha512-wRhgBcwsVYamnkrfRVmweDH4WHm3EA610fWQo47/9Rfw4zmayhJHJzo7IgtJDq8NNo2yxcRmYIq0bP7DFwfxBg==
+  dependencies:
+    label-inside-input-react "^1.1.4"
 
 select-hose@^2.0.0:
   version "2.0.0"
