@@ -129,21 +129,7 @@ This is the method that is used to search through react elements for searchable 
           key: 2
         },
         {
-          content: (
-            <strong>
-              <i>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                vel leo vitae ipsum efficitur venenatis. Maecenas euismod nisl
-                at mi molestie convallis
-              </i>
-            </strong>
-          ),
-          tags: ["nesting"],
-          key: 4
-        },
-
-        {
-          content: "Try typing the name of a social network",
+          content: "Tagged as social networks",
           tags: [
             "google",
             "facebook",
@@ -156,9 +142,26 @@ This is the method that is used to search through react elements for searchable 
           key: 5
         },
         {
+          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+          vel leo vitae ipsum efficitur venenatis. Maecenas euismod nisl
+          at mi molestie convallis`,
+          tags: ["nesting"],
+          key: 4
+        },
+        {
           content: <img src="https://picsum.photos/200" alt="Lorem picsum" />,
           tags: ["image", "img", "lorem", "picsum"],
           key: 6
+        },
+        {
+          content: "Type 'image'",
+          tags: [],
+          key: 8
+        },
+        {
+          content: <img src="https://picsum.photos/199" alt="Lorem picsum" />,
+          tags: ["image", "img", "lorem", "picsum"],
+          key: 9
         }
       ]}
     />

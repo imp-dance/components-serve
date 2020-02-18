@@ -3,12 +3,13 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "../styles/App.scss";
 const StyledHeader = styled.header`
-  background: #f9f9f9;
+  background: #282b34;
   padding: 20px;
   border-bottom: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
   height: 70px;
+  color: #f9f9f9;
   h1 {
     font-size: 1.4em;
     margin: 0;

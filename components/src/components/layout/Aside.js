@@ -25,6 +25,9 @@ const StyledAside = styled.aside`
       &:hover {
         background: #f9f9f9;
       }
+      &:active {
+        background: #eee;
+      }
     }
   }
 `;

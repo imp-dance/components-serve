@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import Tag from "../reusable/Tag";
 import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
+import routes from "../../routes";
+import SearchableList from "searchable-list-hu-react";
 import hljs from "highlight.js";
 import "../styles/App.scss";
 function Template({ item }) {
@@ -15,6 +18,19 @@ function Template({ item }) {
       block.innerHTML = newLines.join("\n");
     });
   }, [item]);
+  const listedRoutes = [];
+  routes.forEach((route, index) => {
+    if (route.url !== "/")
+      listedRoutes.push({
+        content: (
+          <Link to={route.url} className="frontPageLink">
+            {route.title}
+          </Link>
+        ),
+        tags: [],
+        key: `${route.url}--${index}`
+      });
+  });
   return (
     <article>
       <header>
@@ -30,7 +46,11 @@ function Template({ item }) {
       </header>
       <Demo item={item} />
       <ReactMarkdown source={item.markdown} />
-      {item.url === "/" && <div></div>}
+      {item.url === "/" && (
+        <div>
+          <SearchableList list={listedRoutes} />
+        </div>
+      )}
     </article>
   );
 }
