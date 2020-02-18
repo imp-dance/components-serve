@@ -16,7 +16,7 @@
     "react-markdown": "^4.3.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
-    "searchable-list-hu-react": "^1.0.8",
+    "searchable-list-hu-react": "^1.1.2",
     "styled-components": "^5.0.1"
   },
   "scripts": {

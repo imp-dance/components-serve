@@ -10509,10 +10509,10 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-searchable-list-hu-react@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/searchable-list-hu-react/-/searchable-list-hu-react-1.0.8.tgz#143e95d6a438b11ec76a77b9a125152c6b2b9a1c"
-  integrity sha512-wRhgBcwsVYamnkrfRVmweDH4WHm3EA610fWQo47/9Rfw4zmayhJHJzo7IgtJDq8NNo2yxcRmYIq0bP7DFwfxBg==
+searchable-list-hu-react@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/searchable-list-hu-react/-/searchable-list-hu-react-1.1.2.tgz#fd8176fd34b2ab2e684383ee466c93058c0ab174"
+  integrity sha512-GCHzNwjgrUe5MamjeHR+82Z/iyA+/6O/NcJFUTBl+7hd241FZj69RbKsYeL5olFZfR9Xd32EsHdHPkBdocGb4A==
   dependencies:
     label-inside-input-react "^1.1.4"
 

@@ -100,6 +100,10 @@ This is the method that is used to search through react elements for searchable 
             return ' ';
         }
     };
+
+## Disallowed characters
+
+**\` \\ \`** and **\` + \`** are not allowed, as they will cause regex errors with Javascript's string.search() function. Instead, they will produce a blank space \` \`.
 `,
   requires: ["label-inside-input-react"],
   demo: (
