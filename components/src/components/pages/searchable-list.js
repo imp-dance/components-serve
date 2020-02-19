@@ -25,22 +25,22 @@ export default {
         },
         {
             content: (
-            <span>
-                <i>Nested</i> <u>Separate</u> <b>nodes</b>
-            </span>
+              <span>
+                  <i>Nested</i> <u>Separate</u> <b>nodes</b>
+              </span>
             ),
             tags: ["nesting"],
             key: 3
         },
         {
             content: (
-            <strong>
-                <i>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                vel leo vitae ipsum efficitur venenatis. Maecenas euismod nisl
-                at mi molestie convallis
-                </i>
-            </strong>
+              <strong>
+                  <i>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                    vel leo vitae ipsum efficitur venenatis. Maecenas euismod nisl
+                    at mi molestie convallis
+                  </i>
+              </strong>
             ),
             tags: ["loremipsum", "dummy"],
             key: 4
