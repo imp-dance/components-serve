@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGallery from "image-gallery-hu-react";
+import ImageGallery from "../reusable/ImageGallery";
 export default {
   title: "Image gallery",
   url: "/image-gallery",

@@ -81,24 +81,29 @@ Use the style or className prop to apply styles, or alternatively use this selec
 This is the method that is used to search through react elements for searchable text.
 
     const getRecursiveChildText = reactNode => {
-        if (reactNode.props === undefined && reactNode.length > 1) {
-            // Multiple children
-            let joinedNodes = [];
-            reactNode.forEach(node => {
-                if (typeof node === "object")
-                joinedNodes.push(getRecursiveChildText(node));
-            });
-            return joinedNodes.join(" ");
-        } else if (typeof reactNode.props.children === "string") {
-            // Found end of the road
-            return reactNode.props.children;
-        } else if (typeof reactNode.props.children === "object") {
-            // Go down one child
-            return getRecursiveChildText(reactNode.props.children);
-        } else if (reactNode.props.children === undefined) {
-            // Did not find any text nodes
-            return ' ';
-        }
+      if (Array.isArray(reactNode)) {
+        // Multiple children
+        let joinedNodes = [];
+        reactNode.forEach(node => {
+          if (typeof node === "object")
+            joinedNodes.push(getRecursiveChildText(node));
+          else if (typeof node === "string") joinedNodes.push(node);
+        });
+        return joinedNodes.join(" ");
+      }
+      if (reactNode.props.children === undefined) {
+        // Did not find any text nodes
+        if (typeof reactNode === "string") return reactNode;
+        else return " ";
+      }
+      if (typeof reactNode.props.children === "object") {
+        // Found direct child
+        return getRecursiveChildText(reactNode.props.children);
+      }
+      if (typeof reactNode.props.children === "string") {
+        // Found searchable string
+        return reactNode.props.children;
+      }
     };
 
 ## Disallowed characters

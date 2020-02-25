@@ -1,0 +1,56 @@
+.hu-comp-toggle-span {
+  position: relative;
+  display: inline-block;
+  width: 2.5em;
+  height: 1.5em;
+  margin: 0 0.5em 0 0;
+}
+.hu-comp-toggle-check {
+  visibility: hidden;
+  cursor: pointer;
+}
+.hu-comp-toggle-check::before {
+  transition: all 0.1s ease-in;
+  content: "";
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 1.5em;
+  top: 0.25em;
+  border-radius: 20px;
+  background: #aaa;
+}
+.hu-comp-toggle-check::after {
+  --size: 2em;
+  transition: all 0.1s ease-in;
+  content: "";
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: #555;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hu-comp-toggle-check:hover:after {
+  transform: scale(1.1);
+}
+.hu-comp-toggle-check:checked:after {
+  transition: all 0.1s ease-out;
+  right: 0;
+  left: calc(100% - var(--size));
+  background: #575796;
+}
+.hu-comp-toggle-check:checked:before {
+  transition: all 0.1s ease-in;
+  background: #3d3d6d;
+}
+.hu-comp-toggle-label {
+  cursor: pointer;
+}
