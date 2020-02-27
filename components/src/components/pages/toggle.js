@@ -1,5 +1,5 @@
 import React from "react";
-import Toggle from "../reusable/Toggle";
+import Toggle from "toggle-hu-react";
 export default {
   title: "Toggle",
   url: "/toggle",

@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGallery from "../reusable/ImageGallery";
+import ImageGallery from "image-gallery-hu-react";
 export default {
   title: "Image gallery",
   url: "/image-gallery",
@@ -32,6 +32,8 @@ export default {
 > **noOpen**: Boolean, set to true if you don't want the images to open in a new tab onClick.
 
 > **hardScroll**: Boolean, set to true if you don't want smooth scrolling when clicking the buttons.
+
+> **draggable**: Boolean, set to false if you want to disable mouse dragging to scroll.
 
 > ** * **: All other props are passed on to the container div.
 
