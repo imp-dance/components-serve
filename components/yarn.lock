@@ -6019,6 +6019,11 @@ image-gallery-hu-react@^1.1.6:
   resolved "https://registry.yarnpkg.com/image-gallery-hu-react/-/image-gallery-hu-react-1.1.6.tgz#eda4fbf530589e1ca914fd8754b34ec6edeb28b1"
   integrity sha512-2/7mH3w4QxEiYQckl5z3Tr4qtlNCZF4fucFHyCKicT9Gz6vCV1UJ6dXvgmSARGk25NZ78ugGm5MmCv1nyhXfZQ==
 
+image-ratio-fixer-hu-react@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/image-ratio-fixer-hu-react/-/image-ratio-fixer-hu-react-1.0.0.tgz#80c90118059a8afc264d4e085886a8ded288669c"
+  integrity sha512-SKlAKOR4cfBfLC9uZ4+G6WExPtQNR6kDajjUSAmaXWa8E3iSBy6QAJzRYYnSFKVTZ+02HJ6cpnFjAi9ynUiO1A==
+
 immer@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/immer/-/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
@@ -11471,12 +11476,10 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
-toggle-hu-react@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/toggle-hu-react/-/toggle-hu-react-1.0.0.tgz#7ec68b299d14e57d321de676bacfb11ee16f0ce7"
-  integrity sha512-h0cXLSJpB0nJEiu6JGSfNloMK69EPfKTh8RDN9eUzE9QLB6CS/+VqpU7vyY+BSDHWkN6YBjFWvaZ36ZAB8LsZg==
-  dependencies:
-    label-inside-input-react "^1.1.4"
+toggle-hu-react@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/toggle-hu-react/-/toggle-hu-react-1.0.1.tgz#f25a3959a13f5274a132bdb5f402a41a60115649"
+  integrity sha512-U3H74+LhCkyqK0ovHKNR9vsLRj8ZeZX9Ge5BwyEhWaqHMLM14SOZSpRSLk7NR4EczLY8wKPlPu93AK4RmgulKQ==
 
 toidentifier@1.0.0:
   version "1.0.0"

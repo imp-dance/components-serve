@@ -67,9 +67,9 @@ SearchableList only takes in one prop, **list**, which is an array of objects. T
 
 >   **key**: String or number, a unique key.
 
->   ** * **: All other props are passed on to the container div.
-
 > **} ]**
+
+>   ** * **: All other props are passed on to the container div.
 
 ## Styling
 

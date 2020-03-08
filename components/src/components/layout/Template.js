@@ -58,7 +58,7 @@ export const Demo = ({ item }) => {
   return (
     <>
       {item.demo !== null && (
-        <div className="demo">
+        <div className="demo" key={item.url + "/demo"}>
           <h2>Demo</h2>
           {item.demo}
         </div>

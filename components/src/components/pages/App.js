@@ -19,15 +19,15 @@ function App() {
         <Header openNav={openNav}></Header>
         <PageContainer>
           <Aside open={navOpen} closeNav={closeNav} />
-          <Main>
-            <Switch>
-              {Routes.map(item => (
-                <Route path={item.url} exact={true} key={`route1-${item.url}`}>
+          <Switch>
+            {Routes.map(item => (
+              <Route path={item.url} exact={true} key={`route1-${item.url}`}>
+                <Main key={item.url}>
                   <Template item={item} />
-                </Route>
-              ))}
-            </Switch>
-          </Main>
+                </Main>
+              </Route>
+            ))}
+          </Switch>
           <RightSection>
             <Switch>
               {Routes.map(item => (

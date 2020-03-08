@@ -13,10 +13,14 @@ export default {
     import Toggle from "toggle-hu-react";
 
     const App = () => {
-      const [checked, setChecked] = useState(false);
+      const [checked, setChecked] = useState(true);
       return (
         <div>
-          <Toggle label={checked ? "Turn off" : "Turn on"} onChange={() => setChecked(!checked)} />
+          <Toggle 
+            label={checked ? "Turn off" : "Turn on"} 
+            checked={checked} 
+            onChange={() => setChecked(!checked)} 
+          />
         </div>
       )
     }
@@ -24,8 +28,6 @@ export default {
 ## Props
 
 > **label**: String, label
-
-> **onChange**: Method
 
 > ** * **: All other props are passed on to the input node
 

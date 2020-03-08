@@ -121,6 +121,7 @@ article {
     display: none;
   }
   .demo {
+    animation: fadeInRight 0.25s ease-in-out;
     position: sticky;
     top: 0;
     padding: 10px;
@@ -136,4 +137,10 @@ article {
   text-decoration: none;
   padding: 4px 8px;
   border-radius: 2px;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0.6;
+    transform: translate(5px, 0px);
+  }
 }
