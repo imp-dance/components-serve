@@ -1,5 +1,4 @@
 import React from "react";
-import AspectRatioForcer from "../reusable/ImageAspectRatioForcer";
 import AspectRatioTester from "../reusable/AspectRatioTester";
 export default {
   title: "Image ratio fixer",

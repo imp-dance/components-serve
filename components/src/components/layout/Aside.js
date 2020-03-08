@@ -8,7 +8,8 @@ const StyledAside = styled.aside`
   padding: 0px;
   border-right: 1px solid #ddd;
   nav {
-    a {
+    a,
+    button {
       background: transparent;
       font-family: inherit;
       border: none;
@@ -70,9 +71,9 @@ function Aside({ open, closeNav }) {
           )}
           {open && (
             <li>
-              <a href="#" onClick={closeNav} className="hideWhenLarge">
+              <button onClick={closeNav} className="hideWhenLarge">
                 Close
-              </a>
+              </button>
             </li>
           )}
         </StyledUL>

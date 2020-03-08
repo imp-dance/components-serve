@@ -1,91 +1,122 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import "../styles/AspectRatioForcer.css";
 const AspectRatioForcer = props => {
-  const { img, ratio, className, output, liveUpdate } = props;
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-  const [relPos, setRelPos] = useState({ top: 0, left: 0 });
-  // const [isSet, doSet] = useState(false);
-  const [isDragging, setDragging] = useState(false);
-  const [imgDragging, setImgDragging] = useState(false);
-  const [imgStartPos, setImgStartPos] = useState({ x: 0, y: 0 });
-  const [imgPos, setImgPos] = useState({ left: 0, top: 0 });
-  const [lastImgPos, setLastImgPos] = useState({ left: 0, top: 0 });
-  const [containerDim, setContainerDim] = useState({ w: 0, h: 0 });
-  const [scale, setScale] = useState(1);
-  const [imgDim, setImgDim] = useState(null);
-  const ratioFixer = useRef(null);
+  const { img, ratio, className, output } = props;
+  const [containerPosition, setContainerPosition] = useState({
+    top: 0,
+    left: 0
+  });
+  const [containerWH, setContainerWH] = useState({ w: 0, h: 0 });
+  // Selection / ratio box
+  const ratioBoxRef = useRef(null);
+  const [isDraggingRatioBox, setIsDraggingRatioBox] = useState(false);
+  const [ratioStartMouseCord, setRatioStartMouseCord] = useState({
+    x: 0,
+    y: 0
+  });
+  const [ratioPosition, setRatioPosition] = useState({ x: 0, y: 0 });
+  // Image
   const imgRef = useRef(null);
+  const [imgWH, setImgWH] = useState(null);
+  const [isDraggingImage, setIsDraggingImage] = useState(false);
+  const [imgClickStartCord, setImgClickStartCord] = useState({ x: 0, y: 0 });
+  const [previousPositionOutput, setPreviousPositionOutput] = useState({
+    left: 0,
+    top: 0
+  });
+  const [positionOutput, setPositionOutput] = useState({ left: 0, top: 0 });
+  // Scale
+  const [scale, setScale] = useState(1);
+  ////
   const style = {
     "--ARFwidth": ratio.width + "px",
     "--ARFheight": ratio.height + "px"
   };
-  const pointerDown = (event, fortype) => {
-    fortype === "ratio" && ratioFixer.current.focus();
-    if (event.button !== 0) return;
+  const pointerDown = (event, elementClicked) => {
+    elementClicked === "ratio" && ratioBoxRef.current.focus();
+    if (event.button !== 0) return; // not a left click
     const container = event.target.parentElement;
-    const parentBound = container.getBoundingClientRect();
-    setContainerDim({
+    const newContainerPosition = container.getBoundingClientRect();
+    setContainerWH({
       w: container.offsetWidth - ratio.width,
       h: container.offsetHeight - ratio.height
     });
-    setRelPos({
-      top: parentBound.top + window.scrollY,
-      left: parentBound.left + window.scrollX,
-      parentTop: parentBound.top,
-      parentLeft: parentBound.left
+    setContainerPosition({
+      top: newContainerPosition.top + window.scrollY,
+      left: newContainerPosition.left + window.scrollX
     });
-    fortype === "ratio" && setDragging(true);
-    if (fortype === "img") {
-      setImgDragging(true);
-      setImgStartPos({ x: event.pageX, y: event.pageY });
+    if (elementClicked === "ratio") {
+      setIsDraggingRatioBox(true);
+      const ratioBounds = ratioBoxRef.current.getBoundingClientRect();
+      setRatioStartMouseCord({
+        x: event.pageX - ratioBounds.left,
+        y: event.pageY - ratioBounds.top
+      });
+    }
+    if (elementClicked === "img") {
+      setIsDraggingImage(true);
+      setImgClickStartCord({ x: event.pageX, y: event.pageY });
     }
     event.stopPropagation();
     event.preventDefault();
   };
   const pointerMove = event => {
-    if (!isDragging && !imgDragging) return;
-    if (isDragging) {
+    if (!isDraggingRatioBox && !isDraggingImage) return;
+    if (isDraggingRatioBox) {
+      const mouseX = event.pageX;
+      const mouseY = event.pageY;
       const padding = 55;
-      let x = event.pageX - relPos.left - padding;
-      let y = event.pageY - relPos.top - padding;
+      console.log(ratioStartMouseCord);
+      let x = mouseX - containerPosition.left - ratioStartMouseCord.x;
+      let y = mouseY - containerPosition.top - ratioStartMouseCord.y;
+      /*
+        Ex:
+        
+        x = 1200 - 1120 - 55 = 25 = x
+        y = 600 - 320 - 55 = 225 = y
+        
+      */
       if (x <= 0) {
         x = 0;
       }
       if (y <= 0) {
         y = 0;
       }
-      if (x > containerDim.w) {
-        x = containerDim.w;
+      if (x > containerWH.w) {
+        x = containerWH.w;
       }
-      if (y > containerDim.h) {
-        y = containerDim.h;
+      if (y > containerWH.h) {
+        y = containerWH.h;
       }
-      setPos({
+      setRatioPosition({
         x,
         y
       });
     }
-    if (imgDragging) {
-      let x = event.pageX - imgStartPos.x;
-      let y = event.pageY - imgStartPos.y;
-      setImgPos({
-        left: lastImgPos.left + x,
-        top: lastImgPos.top + y
+    if (isDraggingImage) {
+      let x = event.pageX - imgClickStartCord.x;
+      let y = event.pageY - imgClickStartCord.y;
+      setPositionOutput({
+        left: previousPositionOutput.left + x,
+        top: previousPositionOutput.top + y
       });
     }
     event.stopPropagation();
     event.preventDefault();
   };
   const stopDrag = () => {
-    setDragging(false);
-    if (imgDragging) setLastImgPos({ left: imgPos.left, top: imgPos.top });
-    setImgDragging(false);
+    setIsDraggingRatioBox(false);
+    if (isDraggingImage)
+      setPreviousPositionOutput({
+        left: positionOutput.left,
+        top: positionOutput.top
+      });
+    setIsDraggingImage(false);
   };
   const keyDown = event => {
     const key = event.key;
-    let localPos = pos;
-    console.log(localPos);
+    let localPos = ratioPosition;
     if (key === "ArrowLeft") {
       localPos.x -= 1;
     }
@@ -98,29 +129,28 @@ const AspectRatioForcer = props => {
     if (key === "ArrowDown") {
       localPos.y += 1;
     }
-    console.log(localPos);
-    setPos(localPos);
+    setRatioPosition(localPos);
     sendData();
     event.stopPropagation();
     event.preventDefault();
   };
   const sendData = () => {
     stopDrag();
-    const bounds = ratioFixer.current.getBoundingClientRect();
-    const parentBounds = ratioFixer.current.parentElement.getBoundingClientRect();
+    const bounds = ratioBoxRef.current.getBoundingClientRect();
+    const parentBounds = ratioBoxRef.current.parentElement.getBoundingClientRect();
     const xData = bounds.left - parentBounds.left;
     const yData = bounds.top - parentBounds.top;
     const data = {
       transformX: -Math.abs(xData),
       transformY: -Math.abs(yData),
-      x: imgPos.top,
-      y: imgPos.left,
+      x: positionOutput.top,
+      y: positionOutput.left,
       scale,
       css: {
         transform: `translate(-${xData}px, -${yData}px) scale(${scale})`,
         position: "absolute",
-        top: `${imgPos.top}px`,
-        left: `${imgPos.left}px`
+        top: `${positionOutput.top}px`,
+        left: `${positionOutput.left}px`
       }
     };
     typeof output === "function" && output(data);
@@ -145,22 +175,22 @@ const AspectRatioForcer = props => {
         alt={`Change aspect ratio`}
         style={{
           transform: `scale(${scale})`,
-          height: imgDim === null ? "auto" : imgDim.h + "px",
-          width: imgDim === null ? "auto" : imgDim.w + "px",
-          top: imgPos.top + "px",
-          left: imgPos.left + "px"
+          height: imgWH === null ? "auto" : imgWH.h + "px",
+          width: imgWH === null ? "auto" : imgWH.w + "px",
+          top: positionOutput.top + "px",
+          left: positionOutput.left + "px"
         }}
         ref={imgRef}
         onLoad={() =>
-          setImgDim({ w: imgRef.current.width, h: imgRef.current.height })
+          setImgWH({ w: imgRef.current.width, h: imgRef.current.height })
         }
         onPointerDown={e => pointerDown(e, "img")}
       />
       <div
-        className={`hu-comp-ratio ${isDragging && "active"}`}
+        className={`hu-comp-ratio ${isDraggingRatioBox && "active"}`}
         onPointerDown={e => pointerDown(e, "ratio")}
-        style={{ left: pos.x + "px", top: pos.y + "px" }}
-        ref={ratioFixer}
+        style={{ left: ratioPosition.x + "px", top: ratioPosition.y + "px" }}
+        ref={ratioBoxRef}
         tabIndex="0"
         onKeyDown={keyDown}
       ></div>
@@ -180,7 +210,8 @@ AspectRatioForcer.propTypes = {
   img: PropTypes.string,
   ratio: PropTypes.shape({
     width: PropTypes.number,
-    height: PropTypes.number
+    height: PropTypes.number,
+    output: PropTypes.func
   })
 };
 export default AspectRatioForcer;

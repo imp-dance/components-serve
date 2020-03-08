@@ -25,7 +25,11 @@ export default () => {
           background: "#ccc"
         }}
       >
-        <img src="https://liglgo.no/img/screenshot.png" style={info.css} />
+        <img
+          src="https://liglgo.no/img/screenshot.png"
+          alt="LIGL Screenshot Testing"
+          style={info.css}
+        />
       </div>
     </div>
   );
