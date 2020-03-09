@@ -5991,10 +5991,10 @@ image-gallery-hu-react@^1.1.6:
   resolved "https://registry.yarnpkg.com/image-gallery-hu-react/-/image-gallery-hu-react-1.1.6.tgz#eda4fbf530589e1ca914fd8754b34ec6edeb28b1"
   integrity sha512-2/7mH3w4QxEiYQckl5z3Tr4qtlNCZF4fucFHyCKicT9Gz6vCV1UJ6dXvgmSARGk25NZ78ugGm5MmCv1nyhXfZQ==
 
-image-ratio-fixer-hu-react@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/image-ratio-fixer-hu-react/-/image-ratio-fixer-hu-react-1.0.1.tgz#78a06ec8a851bb3cd08d8cc3e0b9f47fd6a2018a"
-  integrity sha512-4zJhsMXst/JPbvWqzAWbV9Fem6UfziOp8yjS8TRMDTxuQBUlC1q7cgW4rPu8i2nFqSQhI3jl3Um/fveWT4M1hQ==
+image-ratio-fixer-hu-react@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/image-ratio-fixer-hu-react/-/image-ratio-fixer-hu-react-1.0.3.tgz#328a1dd03684274b8e41a4bec0db291e9cc94065"
+  integrity sha512-0GFY+XmI9ev/8bWD2pumaDLIiVlJQG6l+5MJiDyeJ5wKEyN6LqkHFvC793oFDLacyFeAQOIyTdYBzRYLMX1rlA==
 
 immer@1.10.0:
   version "1.10.0"

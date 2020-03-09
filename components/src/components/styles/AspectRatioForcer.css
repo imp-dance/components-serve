@@ -7,14 +7,35 @@
   min-height: calc(var(--ARFheight) * 2);
   position: relative;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.hu-comp-image-ar-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    #c1c9ec,
+    #c1c9ec 10px,
+    #a1a6cc 10px,
+    #a1a6cc 20px
+  );
+  z-index: 1;
+}
+.hu-comp-image-ar-bg:active {
+  cursor: move;
 }
 .hu-comp-image-ar-forcer img {
+  margin: 0;
   width: auto;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  border: 10px solid #000;
+  z-index: 2;
 }
 .hu-comp-image-ar-forcer img:active {
   cursor: move;
@@ -24,6 +45,7 @@
   width: var(--ARFwidth);
   border: 2px solid #fff;
   position: absolute;
+  z-index: 2;
   top: 5px;
   left: 5px;
   background: transparent;
@@ -45,7 +67,7 @@
   position: absolute;
   bottom: -10px;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   right: 0;
 }
 

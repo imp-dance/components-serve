@@ -50,11 +50,12 @@ const AspectRatioForcer = props => {
       setIsDraggingRatioBox(true);
       const ratioBounds = ratioBoxRef.current.getBoundingClientRect();
       setRatioStartMouseCord({
-        x: event.pageX - ratioBounds.left,
-        y: event.pageY - ratioBounds.top
+        x: event.pageX - (ratioBounds.left + window.scrollX),
+        y: event.pageY - (ratioBounds.top + window.scrollY)
       });
     }
     if (elementClicked === "img") {
+      if (event.target.tagName === "INPUT") return;
       setIsDraggingImage(true);
       setImgClickStartCord({ x: event.pageX, y: event.pageY });
     }
@@ -66,8 +67,6 @@ const AspectRatioForcer = props => {
     if (isDraggingRatioBox) {
       const mouseX = event.pageX;
       const mouseY = event.pageY;
-      const padding = 55;
-      console.log(ratioStartMouseCord);
       let x = mouseX - containerPosition.left - ratioStartMouseCord.x;
       let y = mouseY - containerPosition.top - ratioStartMouseCord.y;
       /*
@@ -138,16 +137,17 @@ const AspectRatioForcer = props => {
     stopDrag();
     const bounds = ratioBoxRef.current.getBoundingClientRect();
     const parentBounds = ratioBoxRef.current.parentElement.getBoundingClientRect();
-    const xData = bounds.left - parentBounds.left;
-    const yData = bounds.top - parentBounds.top;
+    const ratioBorder = 2;
+    const transformXData = bounds.left - parentBounds.left + ratioBorder;
+    const transformYData = bounds.top - parentBounds.top + ratioBorder;
     const data = {
-      transformX: -Math.abs(xData),
-      transformY: -Math.abs(yData),
+      transformX: -Math.abs(transformXData),
+      transformY: -Math.abs(transformYData),
       x: positionOutput.top,
       y: positionOutput.left,
       scale,
       css: {
-        transform: `translate(-${xData}px, -${yData}px) scale(${scale})`,
+        transform: `translate(-${transformXData}px, -${transformYData}px) scale(${scale})`,
         position: "absolute",
         top: `${positionOutput.top}px`,
         left: `${positionOutput.left}px`
@@ -169,7 +169,9 @@ const AspectRatioForcer = props => {
       onPointerCancel={stopDrag}
       onPointerUp={sendData}
       onPointerOut={stopDrag}
+      onPointerDown={e => pointerDown(e, "img")}
     >
+      <div className="hu-comp-image-ar-bg"></div>
       <img
         src={img}
         alt={`Change aspect ratio`}

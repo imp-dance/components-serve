@@ -1,6 +1,6 @@
 {
   "name": "components",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "private": true,
   "homepage": "https://haakon.underbakke.net/components",
   "dependencies": {
@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "highlight.js": "^9.18.1",
     "image-gallery-hu-react": "^1.1.6",
-    "image-ratio-fixer-hu-react": "^1.0.1",
+    "image-ratio-fixer-hu-react": "^1.0.3",
     "label-inside-input-react": "^1.1.1",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
