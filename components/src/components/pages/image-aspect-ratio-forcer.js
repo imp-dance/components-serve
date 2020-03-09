@@ -11,13 +11,8 @@ export default {
 ## Use
 
     import ImageRatioFixer from "image-ratio-fixer-hu-react";
-    const [info, setInfo] = useState({
-      top: null, // number
-      left: null, // number
-      scale: null, // number
-      css: null // object
-    });
     const App = () => {
+      const [imageCSS, setImageCSS] = useState({});
       return (
         <div>
           <ImageRatioFixer
@@ -25,6 +20,15 @@ export default {
             ratio={{ width: 250, height: 200 }}
             output={(info) => setInfo(info)}
           />
+          {/* Output: */}
+          <div style={{
+            overflow: "hidden",
+            position: "relative",
+            width: "250px",
+            height: "200px"
+          }}>
+            <img src="https://picsum.photos/600" style={imageCSS} />
+          </div>
         </div>
       )
     }
@@ -34,9 +38,13 @@ export default {
 The output prop expects a function that will take 
 an object and set it to state, as seen in the demo code above. The object contains the following keys:
 
-> **top**: Float/Int, how many pixels from the top the selection is.
+> **top**: Float/Int, how many pixels from the top the image should be absolutely positioned.
 
-> **left**: Float/Int, how many pixels from the left the selection is.
+> **left**: Float/Int, how many pixels from the left the image should be absolutely positioned.
+
+> **transformX**: Float/int, how many pixels the image should have on transformX
+
+> **transformY**: Float/int, how many pixels the image should have on transformY
 
 > **scale**: Float/Int, value of scale (1 = 100%)
 

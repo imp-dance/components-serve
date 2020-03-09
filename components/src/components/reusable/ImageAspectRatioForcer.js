@@ -143,8 +143,8 @@ const AspectRatioForcer = props => {
     const data = {
       transformX: -Math.abs(transformXData),
       transformY: -Math.abs(transformYData),
-      x: positionOutput.top,
-      y: positionOutput.left,
+      top: positionOutput.top,
+      left: positionOutput.left,
       scale,
       css: {
         transform: `translate(-${transformXData}px, -${transformYData}px) scale(${scale})`,
