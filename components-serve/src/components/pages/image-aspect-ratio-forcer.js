@@ -18,7 +18,7 @@ export default {
           <ImageRatioFixer
             img="https://picsum.photos/600"
             ratio={{ width: 250, height: 200 }}
-            output={(info) => setInfo(info)}
+            output={(info) => setInfo(info.css)}
           />
           {/* Output: */}
           <div style={{
